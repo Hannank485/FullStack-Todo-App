@@ -69,7 +69,7 @@ export default function AuthPage({
             minLength={6}
             maxLength={15}
             required
-            autoComplete="false"
+            autoComplete="off"
             onChange={(e) => {
               setPassword(e.target.value);
             }}
