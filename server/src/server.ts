@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://full-stack-todo-app-eta-seven.vercel.app/",
+    origin: "https://full-stack-todo-app-eta-seven.vercel.app",
     credentials: true,
   }),
 );
