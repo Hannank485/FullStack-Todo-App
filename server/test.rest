@@ -1,0 +1,57 @@
+GET http://localhost:3000/api/
+
+### REGISTER
+
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "hannan",
+    "password": "hello123"
+}
+
+### CHECK LOGIN
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "hannan",
+    "password": "123123"
+}
+
+### CHECK LOGOUT
+POST http://localhost:3000/api/auth/logout
+Cookie: refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzcwNzgwMTQ2LCJleHAiOjE3NzA3ODEwNDZ9.aaEXQkRc9kLG-yQCNaQF1U87zCTmX4y5uN-p4jYCk7I
+
+
+
+### FETCH TASK
+GET http://localhost:3000/api/task/
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzcwNzgwMTQ2LCJleHAiOjE3NzA3ODEwNDZ9.aaEXQkRc9kLG-yQCNaQF1U87zCTmX4y5uN-p4jYCk7I
+
+### CREATE TASK
+POST http://localhost:3000/api/task/
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzcwNzgwMTQ2LCJleHAiOjE3NzA3ODEwNDZ9.aaEXQkRc9kLG-yQCNaQF1U87zCTmX4y5uN-p4jYCk7I
+Content-Type: application/json
+
+{
+    "task": "TEST TASKS"
+}
+
+### UPDATE TASK
+PUT http://localhost:3000/api/task/15
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzcwNzgwMTQ2LCJleHAiOjE3NzA3ODEwNDZ9.aaEXQkRc9kLG-yQCNaQF1U87zCTmX4y5uN-p4jYCk7I
+Content-Type: application/json
+
+{
+    "complete": true
+}
+
+### DELETE TASK
+DELETE http://localhost:3000/api/task/15
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzcwNzgwMTQ2LCJleHAiOjE3NzA3ODEwNDZ9.aaEXQkRc9kLG-yQCNaQF1U87zCTmX4y5uN-p4jYCk7I
+
+### DELETE ALL TASKS
+DELETE http://localhost:3000/api/task/all
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzcwNzgwMTQ2LCJleHAiOjE3NzA3ODEwNDZ9.aaEXQkRc9kLG-yQCNaQF1U87zCTmX4y5uN-p4jYCk7I
+
