@@ -2,7 +2,7 @@ import axios from "axios";
 
 // BASE URL
 export const api = axios.create({
-  baseURL: "http://localhost:3000/api/",
+  baseURL: "https://fullstack-todo-app-hgxg.onrender.com/api/",
   withCredentials: true,
 });
 

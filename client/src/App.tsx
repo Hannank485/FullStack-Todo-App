@@ -56,7 +56,6 @@ function App() {
         isAuth(true);
       } catch {
         isAuth(false);
-        alert("Session Timed Out please login again");
       }
     };
 
@@ -120,7 +119,7 @@ function App() {
         />
       )}
       {auth === null && !rateLimit && (
-        <div className="fixed inset-0 flex items-center justify-cente">
+        <div className="fixed inset-0 flex items-center justify-center">
           <PropagateLoader
             color="#fb7185"
             size={15}
