@@ -44,7 +44,7 @@ const authController = {
         return res.status(500).json({ message: "SOMETHING WENT WRONG " });
       }
 
-      // SEND REFRESH TOKEN VIA COOKIE AND ACCESSTOKEN TO STORE IN LOCALSTORAGE
+      
       res.cookie("accessToken", accessToken, {
         httpOnly: true,
         secure: true,
